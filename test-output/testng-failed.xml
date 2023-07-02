@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Amazon Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="browserInstance" value="chrome"/>
+  <parameter name="url" value="https://www.amazon.in/"/>
+  <listeners>
+    <listener class-name="listerners.TestFail"/>
+    <listener class-name="listerners.Report"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="tests.SignInPageTCs">
+        <methods>
+          <include name="LogIn"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- tests.SignInPageTCs -->
+      <class name="tests.HomePageTCs">
+        <methods>
+          <include name="verifyLogo"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- tests.HomePageTCs -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Amazon Suite] -->
